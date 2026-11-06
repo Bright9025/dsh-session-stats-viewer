@@ -1,6 +1,6 @@
 {
   "name": "dsh-session-stats-viewer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A DeepSeek Harness plugin that adds a session statistics page to the Web sidebar.",
   "author": "Bright9025",
   "license": "MIT",

@@ -42,7 +42,7 @@ npm test
 - Host 代码放在 `src/index.js`；Client 代码放在 `src/client.js`。
 - Client 是单个浏览器模块，模块 id 必须与 `package.json` 的包名一致；不要引入外部 UI 库，也不要 `require` 其他 DSH Client 包。
 - 样式使用 DSH 主题变量（`--dsw-alias-*`），不要写死颜色；容器与文字必须同时适配明暗主题。
-- 所有可见文案通过 Client locale 注册，中文与英文都要补齐。
+- 所有可见文案通过 Client locale 注册；新增或修改文案时，必须同时补齐 `zh`、`en`、`ja`、`es`、`fr`、`de`、`ru`、`pt` 八种字典，并保留 `{placeholder}` 占位符（`npm test` 会检查键与占位符完整性）。
 - Host 的纯函数（`foldSession`、`buildView`、`costOf`）保持可导出、无副作用，便于测试。
 - 不新增运行时依赖；确需新增时先开 Issue 说明理由。
 - 不修改、不归档、不删除任何会话数据；统计页必须保持只读。

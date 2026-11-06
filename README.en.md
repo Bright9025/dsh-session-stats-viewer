@@ -25,6 +25,7 @@ A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to t
 - ⚡ **Conversation performance** – average turn, first-token latency, output speed, and tool error rate.
 - 🖥️ **DSH runtime** – process CPU (per core and machine-wide), RSS / heap, event-loop p99, uptime, PID, and Node version, sampled every 5 seconds.
 - 🎯 **Titles match the sidebar** – titles come from DSH's `title` projection instead of raw logs or the first message.
+- 🌐 **Follows the DSH language** – the sidebar entry and page copy follow Settings → General → Language, with Simplified Chinese, English, Japanese, Spanish, French, German, Russian, and Portuguese dictionaries.
 - 🚀 **Snapshot first, then incremental refresh** – the page paints the previous snapshot immediately and re-reads only changed Sessions in the background.
 
 ## 🖼️ Screenshot
@@ -148,7 +149,7 @@ To override, add a matching entry for `session-stats-page` in the profile's `cor
 npm test
 ```
 
-Tests use Node's built-in `node:test` and cover folding, time ranges, average price, workspace mapping, and empty data.
+Tests use Node's built-in `node:test` and cover folding, time ranges, average price, workspace mapping, empty data, and the key/placeholder completeness of all eight locale dictionaries.
 
 Manual verification:
 
