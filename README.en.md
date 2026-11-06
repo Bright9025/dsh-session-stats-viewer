@@ -158,6 +158,15 @@ Manual verification:
 2. Open **Session statistics** and check ranges, the three sorts, hover details, and the currency switch;
 3. Restart DSH and confirm the first paint comes from the snapshot before refreshing.
 
+## 🙏 Inspiration and credits
+
+The idea and UI design for this plugin come from the official DeepSeek Harness Bilibili video **"大家好，这里是 DeepSeek Harness，正式入驻 B 站！"** ("Hello everyone, this is DeepSeek Harness, officially joining Bilibili!") at **01:21**, where the original **Session statistics** panel is shown.
+
+- [Chinese version (01:21)](https://www.bilibili.com/video/BV1i24P6rEmt/?share_source=copy_web&vd_source=1ef93e8537ab9d0874fa2d209de81fd0&t=81)
+- [English version (01:21)](https://www.bilibili.com/video/BV1i24P6rEmt/?p=2&share_source=copy_web&vd_source=1ef93e8537ab9d0874fa2d209de81fd0&t=81)
+
+This project is an independent community implementation and is not affiliated with the video authors or DeepSeek. The interface is a functional and visual reference only; no assets or code from the video were copied.
+
 ## 📄 License
 
 [MIT License](./LICENSE).

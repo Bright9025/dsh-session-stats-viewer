@@ -169,6 +169,15 @@ npm test
 2. 打开「会话统计」，检查各范围、三种排行、悬停详情与货币切换；
 3. 重启 DSH，确认首屏来自快照且随后自动刷新。
 
+## 🙏 灵感与致谢
+
+本插件的灵感与 UI 设计来源于 DeepSeek Harness 官方 B 站视频 **《大家好，这里是 DeepSeek Harness，正式入驻 B 站！》** 的 **01:21** 处（视频中展示的「会话统计 / Session statistics」面板）。
+
+- [中文版视频（01:21）](https://www.bilibili.com/video/BV1i24P6rEmt/?share_source=copy_web&vd_source=1ef93e8537ab9d0874fa2d209de81fd0&t=81)
+- [English version（01:21）](https://www.bilibili.com/video/BV1i24P6rEmt/?p=2&share_source=copy_web&vd_source=1ef93e8537ab9d0874fa2d209de81fd0&t=81)
+
+本项目是社区独立实现，与视频作者及 DeepSeek 官方没有隶属关系；界面仅作功能与视觉参考，未复制视频中的任何素材或代码。
+
 ## 📄 许可证
 
 本项目采用 [MIT License](./LICENSE) 开源。
