@@ -1,6 +1,6 @@
 - insert:
     - id: session-stats-page
-      name: session-stats-viewer
+      name: dsh-session-stats-viewer
       config:
         pricing:
           input: 0.5

@@ -1,5 +1,5 @@
 {
-  "name": "session-stats-viewer",
+  "name": "dsh-session-stats-viewer",
   "version": "1.0.0",
   "description": "A DeepSeek Harness plugin that adds a session statistics page to the Web sidebar.",
   "author": "Bright9025",
@@ -16,11 +16,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bright9025/session-stats-viewer.git"
+    "url": "git+https://github.com/Bright9025/dsh-session-stats-viewer.git"
   },
-  "homepage": "https://github.com/Bright9025/session-stats-viewer#readme",
+  "homepage": "https://github.com/Bright9025/dsh-session-stats-viewer#readme",
   "bugs": {
-    "url": "https://github.com/Bright9025/session-stats-viewer/issues"
+    "url": "https://github.com/Bright9025/dsh-session-stats-viewer/issues"
   },
   "engines": {
     "node": ">=20"

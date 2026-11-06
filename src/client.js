@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: 'session-stats-viewer',
+  id: 'dsh-session-stats-viewer',
   factory(require) {
     const React = require('react');
     const h = React.createElement;
@@ -907,7 +907,7 @@ window.__ModuleLoader__.load({
         ctx.effect(() => ctx.locale.register(NS, { zh, en }), 'session-stats: dictionaries');
         ctx.effect(() => {
           const tag = document.createElement('style');
-          tag.dataset.plugin = 'session-stats-viewer';
+          tag.dataset.plugin = 'dsh-session-stats-viewer';
           tag.textContent = CSS;
           document.head.appendChild(tag);
           return () => tag.remove();
