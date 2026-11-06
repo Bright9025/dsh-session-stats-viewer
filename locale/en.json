@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session statistics",
+    "description": "Adds a Session statistics page to the left sidebar: token usage, estimated cost, cache hit rate, daily usage, session ranking, conversation performance, and DSH runtime health. Costs are estimates from configurable token prices."
+  }
+}

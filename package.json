@@ -1,0 +1,56 @@
+{
+  "name": "session-stats-viewer",
+  "version": "1.0.0",
+  "description": "A DeepSeek Harness plugin that adds a session statistics page to the Web sidebar.",
+  "author": "Bright9025",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "statistics",
+    "tokens",
+    "dashboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bright9025/session-stats-viewer.git"
+  },
+  "homepage": "https://github.com/Bright9025/session-stats-viewer#readme",
+  "bugs": {
+    "url": "https://github.com/Bright9025/session-stats-viewer/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "src/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

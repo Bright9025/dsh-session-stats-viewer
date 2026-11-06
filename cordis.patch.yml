@@ -1,0 +1,10 @@
+- insert:
+    - id: session-stats-page
+      name: session-stats-viewer
+      config:
+        pricing:
+          input: 0.5
+          cacheRead: 0.05
+          cacheWrite: 0.5
+          output: 2
+          cnyPerUsd: 7.2
