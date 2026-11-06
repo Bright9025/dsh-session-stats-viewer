@@ -20,6 +20,7 @@ A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to t
 
 - 📈 **Overview** – total tokens, estimated cost, session count, and cache hit rate for the last 24 hours / 7 / 14 / 30 days or all time.
 - 💰 **Readable average price** – automatically scales the unit across `1M / 10M / 100M / 1B tokens` so the number stays meaningful.
+- 💱 **Default currency follows the language** – Chinese opens in CNY, every other language opens in USD; a manual switch is kept for the current visit.
 - 🗓️ **Daily usage** – stacked bars for input miss, cache read, cache write, and output tokens; hover any bar for the full date and breakdown.
 - 🏆 **Session ranking** – sort by tokens, turn time, or cost; the primary number follows the selected sort, and each row shows its workspace and turn count.
 - ⚡ **Conversation performance** – average turn, first-token latency, output speed, and tool error rate.
@@ -105,7 +106,7 @@ If the entry is missing, refresh the page first; restart DSH if it still does no
 ## 🧭 Usage
 
 1. Click **Session statistics** in the left sidebar.
-2. Switch the time range and currency at the top.
+2. Switch the time range and currency at the top. Chinese opens in CNY; other languages open in USD.
 3. Hover a bar for the full date and the four token kinds.
 4. Switch the ranking between **By tokens / By time / By cost**; click a row to open that Session.
 5. The page refreshes every 20 seconds and immediately after a range change.

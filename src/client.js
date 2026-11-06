@@ -1177,10 +1177,25 @@ window.__ModuleLoader__.load({
         h('div', { className: 'dss-body' }, content));
     }
 
+    function defaultCurrencyFor(localeId) {
+      return typeof localeId === 'string' && localeId.toLowerCase().startsWith('zh') ? 'cny' : 'usd';
+    }
+
     function SessionStatsPage(props) {
       const { t, openSession, localeService } = props;
+      const readActiveLocale = () => {
+        if (localeService === null || typeof localeService !== 'object' || typeof localeService.getSnapshot !== 'function') return 'zh';
+        try {
+          const snapshot = localeService.getSnapshot();
+          return snapshot !== null && typeof snapshot === 'object' && typeof snapshot.active === 'string' ? snapshot.active : 'zh';
+        } catch {
+          return 'zh';
+        }
+      };
+      const activeLocale = readActiveLocale();
       const [range, setRange] = React.useState('7d');
-      const [currency, setCurrency] = React.useState('cny');
+      const [currency, setCurrency] = React.useState(() => defaultCurrencyFor(activeLocale));
+      const [currencyTouched, setCurrencyTouched] = React.useState(false);
       const [payload, setPayload] = React.useState(null);
       const [error, setError] = React.useState(null);
       const [loading, setLoading] = React.useState(true);
@@ -1193,6 +1208,10 @@ window.__ModuleLoader__.load({
         if (localeService === null || typeof localeService !== 'object' || typeof localeService.subscribe !== 'function') return undefined;
         return localeService.subscribe(() => setLocaleTick((value) => value + 1));
       }, [localeService]);
+
+      React.useEffect(() => {
+        if (!currencyTouched) setCurrency(defaultCurrencyFor(activeLocale));
+      }, [activeLocale, currencyTouched]);
 
       React.useEffect(() => {
         let disposed = false;
@@ -1260,7 +1279,10 @@ window.__ModuleLoader__.load({
         range,
         currency,
         setRange,
-        setCurrency,
+        setCurrency: (next) => {
+          setCurrencyTouched(true);
+          setCurrency(next);
+        },
         error,
         loading,
         retry: () => setNonce((value) => value + 1),
