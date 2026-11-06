@@ -1,4 +1,4 @@
-# 贡献指南 / Contributing to Session Stats Viewer
+# 贡献指南 / Contributing to DSH Session Stats Viewer
 
 感谢你愿意改进 Session Stats Viewer。无论是 Bug 报告、文档修订、截图更新还是代码提交，都欢迎。
 
@@ -7,7 +7,7 @@
 ## 开始之前
 
 1. 先阅读 [README.md](./README.md) 和 [English README](./README.en.md)，确认当前功能与已知边界。
-2. 搜索现有 [Issues](https://github.com/Bright9025/session-stats-viewer/issues)，避免重复报告。
+2. 搜索现有 [Issues](https://github.com/Bright9025/dsh-session-stats-viewer/issues)，避免重复报告。
 3. 较大的功能改动请先开 Issue 讨论方向，不要直接提交一个难以评审的大 PR。
 4. **不要提交个人数据**：会话标题、工作区路径、真实 Token 账单、`fold-*.json` 快照、`~/.dsh` 下的任何文件。
 
@@ -18,8 +18,8 @@
 - 无需安装依赖、无需构建
 
 ```bash
-git clone https://github.com/Bright9025/session-stats-viewer.git
-cd session-stats-viewer
+git clone https://github.com/Bright9025/dsh-session-stats-viewer.git
+cd dsh-session-stats-viewer
 npm test
 ```
 

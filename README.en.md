@@ -1,10 +1,16 @@
 <div align="center">
 
-# 📊 Session Stats Viewer
+# 📊 DSH Session Stats Viewer
 
 [English](./README.en.md) | [简体中文](./README.md)
 
 A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to the Web sidebar: token usage, estimated cost, cache hit rate, daily usage, session ranking, conversation performance, and DSH runtime health.
+
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f7cf7)](https://github.com/deepseek-ai/deepseek-harness)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](./LICENSE)
+
+[![Node](https://img.shields.io/badge/Node-%E2%89%A520-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 > DSH plugin · read-only statistics · no extra service · no third-party dependencies
 
@@ -28,7 +34,7 @@ A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to t
 ## 📁 Project structure
 
 ```text
-session-stats-viewer/
+dsh-session-stats-viewer/
 ├── src/
 │   ├── index.js            # Host: log fold, snapshot cache, runtime sampler, /api route
 │   └── client.js           # Client: sidebar icon and statistics page (single browser module)
@@ -60,19 +66,40 @@ session-stats-viewer/
 - No extra service or API key
 - Node.js ≥ 20 for development and tests only
 
-### Install the local bundle
+### Option 1: let the DSH agent install it (recommended)
+
+1. Clone the repository to a stable directory (not a temporary downloads folder):
 
 ```bash
-git clone https://github.com/Bright9025/session-stats-viewer.git
+git clone https://github.com/Bright9025/dsh-session-stats-viewer.git
 ```
 
-Install that directory as a local bundle in DSH (for example, ask the DSH agent to run
-`plugin_manager install_bundle` with the **absolute path**). After installation:
+2. In a DSH conversation, send (replace the path with yours):
 
-1. A **Session statistics** entry appears in the left sidebar;
-2. If it does not appear, refresh the page or restart DSH.
+> Install this directory as a local bundle: `C:\path\to\dsh-session-stats-viewer`
 
-> The plugin is installed from a local directory and is not published to npm. Reinstall the directory to upgrade.
+The agent calls `plugin_manager install_bundle` for you. The install belongs to the current profile and applies to every Session in it.
+
+3. Refresh the DSH page. **Session statistics** appears in the left sidebar below **Automation**.
+
+### Option 2: install through the plugin manager
+
+If your DSH build offers a local-directory install entry, open **Settings → Plugins**, choose the local install, and point it at the repository directory. The result is the same as Option 1.
+
+### Verify the installation
+
+- A **Session statistics** entry appears in the left sidebar;
+- The plugin is listed under **Settings → Plugins**;
+- Opening the page shows total tokens, estimated cost, and recent session data.
+
+If the entry is missing, refresh the page first; restart DSH if it still does not appear.
+
+### Upgrade and uninstall
+
+- **Upgrade**: `git pull`, then reinstall the directory (uninstall and install again, or ask the agent to run `install_bundle` again).
+- **Uninstall**: **Settings → Plugins → Session statistics → Uninstall**. Uninstalling removes the plugin only; it never deletes Session data.
+
+> The plugin is installed from a local directory and is not published to npm. Node.js is only needed for tests, not for installation or use.
 
 ## 🧭 Usage
 

@@ -1,10 +1,16 @@
 <div align="center">
 
-# 📊 Session Stats Viewer
+# 📊 DSH Session Stats Viewer
 
 [English](./README.en.md) | [简体中文](./README.md)
 
 为 **DeepSeek Harness（DSH）** 的 Web 侧边栏增加一个「会话统计」页：汇总全部会话的 Token 消耗、预估成本、缓存命中、每日用量、会话排行、对话性能与 DSH 运行时状态。
+
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f7cf7)](https://github.com/deepseek-ai/deepseek-harness)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](./LICENSE)
+
+[![Node](https://img.shields.io/badge/Node-%E2%89%A520-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 > DSH 插件 · 只读统计 · 无额外服务 · 无第三方依赖
 
@@ -28,7 +34,7 @@
 ## 📁 项目结构
 
 ```text
-session-stats-viewer/
+dsh-session-stats-viewer/
 ├── src/
 │   ├── index.js            # Host：日志折叠、快照缓存、运行时采样、/api 路由
 │   └── client.js           # Client：侧边栏图标与统计页面（单文件浏览器模块）
@@ -60,19 +66,40 @@ session-stats-viewer/
 - 无需额外服务或 API Key
 - 仅开发/测试需要 Node.js ≥ 20
 
-### 从源码安装为本地插件
+### 方式一：让 DSH 智能体安装（推荐）
+
+1. 克隆仓库到一个固定目录（不要放在临时下载目录）：
 
 ```bash
-git clone https://github.com/Bright9025/session-stats-viewer.git
+git clone https://github.com/Bright9025/dsh-session-stats-viewer.git
 ```
 
-然后在 DSH 中把该目录作为本地 bundle 安装（例如让 DSH 智能体执行
-`plugin_manager install_bundle`，参数为仓库的**绝对路径**），安装完成后：
+2. 在 DSH 对话中发送（把路径换成你的实际路径）：
 
-1. 左侧边栏出现「会话统计」入口；
-2. 若入口未出现，刷新页面或重启 DSH。
+> 把这个目录安装为本地 bundle：`C:\path\to\dsh-session-stats-viewer`
 
-> 本插件以本地目录形式安装，不会发布到 npm；升级时重新安装该目录即可。
+智能体会调用 `plugin_manager install_bundle` 完成安装。安装写入当前 profile，对该 profile 下的所有会话生效。
+
+3. 刷新 DSH 页面。左侧边栏「自动化任务」下方会出现 **会话统计**。
+
+### 方式二：通过插件管理器安装
+
+如果当前 DSH 版本提供「从本地目录安装」入口，打开 **设置 → 插件**，选择本地安装并指向仓库目录，效果与方式一相同。
+
+### 安装后检查
+
+- 左侧边栏出现「会话统计」；
+- 设置 → 插件中能看到该插件；
+- 打开页面后能看到总 Token、预估成本与最近的会话数据。
+
+如果入口没有出现：先刷新页面；仍然没有就重启 DSH。
+
+### 升级与卸载
+
+- **升级**：在仓库里 `git pull` 后重新安装该目录（插件管理器卸载再安装，或再次让智能体执行 `install_bundle`）。
+- **卸载**：设置 → 插件 → 会话统计 → 卸载。卸载只移除插件，不会删除任何会话数据。
+
+> 本插件以本地目录形式安装，未发布到 npm；使用和安装都不需要 Node.js，Node.js 仅用于跑测试。
 
 ## 🧭 使用
 
