@@ -7,6 +7,7 @@
 A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to the Web sidebar: token usage, estimated cost, cache hit rate, daily usage, session ranking, conversation performance, and DSH runtime health.
 
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f7cf7)](https://github.com/deepseek-ai/deepseek-harness)
+[![npm](https://img.shields.io/npm/v/@bright9025/dsh-session-stats-viewer?logo=npm&color=cb3837)](https://www.npmjs.com/package/@bright9025/dsh-session-stats-viewer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](./LICENSE)
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A520-339933?logo=node.js&logoColor=white)](https://nodejs.org)
@@ -70,7 +71,21 @@ dsh-session-stats-viewer/
 - No extra service or API key
 - Node.js ≥ 20 for development and tests only
 
-### Option 1: let the DSH agent install it (recommended)
+### Option 1: install from npm (recommended)
+
+```bash
+dsh plugin --profile <profile> add @bright9025/dsh-session-stats-viewer
+```
+
+Package page: <https://www.npmjs.com/package/@bright9025/dsh-session-stats-viewer>
+
+Alternatively, ask in a DSH conversation:
+
+> Install the npm package `@bright9025/dsh-session-stats-viewer`
+
+Refresh the DSH page afterwards. **Session statistics** appears in the left sidebar below **Automation**.
+
+### Option 2: install from source (development)
 
 1. Clone the repository to a stable directory (not a temporary downloads folder):
 
@@ -82,13 +97,7 @@ git clone https://github.com/Bright9025/dsh-session-stats-viewer.git
 
 > Install this directory as a local bundle: `C:\path\to\dsh-session-stats-viewer`
 
-The agent calls `plugin_manager install_bundle` for you. The install belongs to the current profile and applies to every Session in it.
-
-3. Refresh the DSH page. **Session statistics** appears in the left sidebar below **Automation**.
-
-### Option 2: install through the plugin manager
-
-If your DSH build offers a local-directory install entry, open **Settings → Plugins**, choose the local install, and point it at the repository directory. The result is the same as Option 1.
+The agent calls `plugin_manager install_bundle` for you. Use the source install for development and the npm install for everyday use; do not install both at once.
 
 ### Verify the installation
 
@@ -100,10 +109,10 @@ If the entry is missing, refresh the page first; restart DSH if it still does no
 
 ### Upgrade and uninstall
 
-- **Upgrade**: `git pull`, then reinstall the directory (uninstall and install again, or ask the agent to run `install_bundle` again).
+- **Upgrade**: reinstall when a new version is available (uninstall the old one, then run the install command again); for the source install, `git pull` and reinstall.
 - **Uninstall**: **Settings → Plugins → Session statistics → Uninstall**. Uninstalling removes the plugin only; it never deletes Session data.
 
-> The plugin is installed from a local directory and is not published to npm. Node.js is only needed for tests, not for installation or use.
+> Published on npm. Node.js is only needed for tests, not for installation or use.
 
 ## 🧭 Usage
 

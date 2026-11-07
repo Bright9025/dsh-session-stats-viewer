@@ -7,6 +7,7 @@
 为 **DeepSeek Harness（DSH）** 的 Web 侧边栏增加一个「会话统计」页：汇总全部会话的 Token 消耗、预估成本、缓存命中、每日用量、会话排行、对话性能与 DSH 运行时状态。
 
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f7cf7)](https://github.com/deepseek-ai/deepseek-harness)
+[![npm](https://img.shields.io/npm/v/@bright9025/dsh-session-stats-viewer?logo=npm&color=cb3837)](https://www.npmjs.com/package/@bright9025/dsh-session-stats-viewer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](./LICENSE)
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A520-339933?logo=node.js&logoColor=white)](https://nodejs.org)
@@ -70,7 +71,21 @@ dsh-session-stats-viewer/
 - 无需额外服务或 API Key
 - 仅开发/测试需要 Node.js ≥ 20
 
-### 方式一：让 DSH 智能体安装（推荐）
+### 方式一：从 npm 安装（推荐）
+
+```bash
+dsh plugin --profile <profile> add @bright9025/dsh-session-stats-viewer
+```
+
+包地址：<https://www.npmjs.com/package/@bright9025/dsh-session-stats-viewer>
+
+也可以在 DSH 对话里直接说：
+
+> 安装 npm 包 `@bright9025/dsh-session-stats-viewer`
+
+安装完成后刷新 DSH 页面。左侧边栏「自动化任务」下方会出现 **会话统计**。
+
+### 方式二：从源码安装（开发）
 
 1. 克隆仓库到一个固定目录（不要放在临时下载目录）：
 
@@ -82,13 +97,7 @@ git clone https://github.com/Bright9025/dsh-session-stats-viewer.git
 
 > 把这个目录安装为本地 bundle：`C:\path\to\dsh-session-stats-viewer`
 
-智能体会调用 `plugin_manager install_bundle` 完成安装。安装写入当前 profile，对该 profile 下的所有会话生效。
-
-3. 刷新 DSH 页面。左侧边栏「自动化任务」下方会出现 **会话统计**。
-
-### 方式二：通过插件管理器安装
-
-如果当前 DSH 版本提供「从本地目录安装」入口，打开 **设置 → 插件**，选择本地安装并指向仓库目录，效果与方式一相同。
+智能体会调用 `plugin_manager install_bundle`。本地源码安装适合调试，npm 安装适合日常使用；两者不要同时装。
 
 ### 安装后检查
 
@@ -100,10 +109,10 @@ git clone https://github.com/Bright9025/dsh-session-stats-viewer.git
 
 ### 升级与卸载
 
-- **升级**：在仓库里 `git pull` 后重新安装该目录（插件管理器卸载再安装，或再次让智能体执行 `install_bundle`）。
+- **升级**：有新版后重新安装（先卸载旧版，再执行上面的安装命令）；源码方式则 `git pull` 后重装。
 - **卸载**：设置 → 插件 → 会话统计 → 卸载。卸载只移除插件，不会删除任何会话数据。
 
-> 本插件以本地目录形式安装，未发布到 npm；使用和安装都不需要 Node.js，Node.js 仅用于跑测试。
+> 已发布到 npm；使用和安装不需要 Node.js，Node.js 仅用于跑测试。
 
 ## 🧭 使用
 
