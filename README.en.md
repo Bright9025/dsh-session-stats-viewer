@@ -31,7 +31,9 @@ A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to t
 
 ## 🖼️ Screenshot
 
-![Session statistics overview in English, light theme](./docs/screenshots/overview-en-light.png)
+| Light | Dark |
+| --- | --- |
+| ![Session statistics overview in English, light theme](./docs/screenshots/overview-en-light.png) | ![Session statistics overview in English, dark theme](./docs/screenshots/overview-en-dark.png) |
 
 ## 📁 Project structure
 
