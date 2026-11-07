@@ -6,7 +6,7 @@
 
 A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to the Web sidebar: token usage, estimated cost, cache hit rate, daily usage, session ranking, conversation performance, and DSH runtime health.
 
-[![DeepSeek Harness 0.2.2-rc.1](https://img.shields.io/badge/DeepSeek%20Harness-0.2.2--rc.1-4D6BFE?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
+[![DeepSeek Harness 0.2.2-rc.1](https://img.shields.io/badge/DeepSeek%20Harness-0.2.2--rc.1-4f7cf7)](https://github.com/deepseek-ai/deepseek-harness)
 [![npm](https://img.shields.io/npm/v/@bright9025/dsh-session-stats-viewer?logo=npm&color=cb3837)](https://www.npmjs.com/package/@bright9025/dsh-session-stats-viewer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/LICENSE)
 
