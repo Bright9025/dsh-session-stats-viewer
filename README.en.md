@@ -2,13 +2,13 @@
 
 # 📊 DSH Session Stats Viewer
 
-[English](./README.en.md) | [简体中文](./README.md)
+[English](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/README.en.md) | [简体中文](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/README.md)
 
 A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to the Web sidebar: token usage, estimated cost, cache hit rate, daily usage, session ranking, conversation performance, and DSH runtime health.
 
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f7cf7)](https://github.com/deepseek-ai/deepseek-harness)
 [![npm](https://img.shields.io/npm/v/@bright9025/dsh-session-stats-viewer?logo=npm&color=cb3837)](https://www.npmjs.com/package/@bright9025/dsh-session-stats-viewer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/LICENSE)
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A520-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
@@ -34,7 +34,7 @@ A **DeepSeek Harness (DSH)** plugin that adds a **Session statistics** page to t
 
 | Light | Dark |
 | --- | --- |
-| ![Session statistics overview in English, light theme](./docs/screenshots/overview-en-light.png) | ![Session statistics overview in English, dark theme](./docs/screenshots/overview-en-dark.png) |
+| ![Session statistics overview in English, light theme](https://raw.githubusercontent.com/Bright9025/dsh-session-stats-viewer/main/docs/screenshots/overview-en-light.png) | ![Session statistics overview in English, dark theme](https://raw.githubusercontent.com/Bright9025/dsh-session-stats-viewer/main/docs/screenshots/overview-en-dark.png) |
 
 ## 📁 Project structure
 
@@ -180,11 +180,11 @@ This project is an independent community implementation and is not affiliated wi
 
 ## 📄 License
 
-[MIT License](./LICENSE).
+[MIT License](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/LICENSE).
 
 ## 🤝 Contributing
 
-Issues and pull requests are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) first.
+Issues and pull requests are welcome. Please read [CONTRIBUTING.md](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/CONTRIBUTING.md) first.
 
 ## 📧 Contact
 

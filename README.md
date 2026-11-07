@@ -2,13 +2,13 @@
 
 # 📊 DSH Session Stats Viewer
 
-[English](./README.en.md) | [简体中文](./README.md)
+[English](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/README.en.md) | [简体中文](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/README.md)
 
 为 **DeepSeek Harness（DSH）** 的 Web 侧边栏增加一个「会话统计」页：汇总全部会话的 Token 消耗、预估成本、缓存命中、每日用量、会话排行、对话性能与 DSH 运行时状态。
 
 [![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4f7cf7)](https://github.com/deepseek-ai/deepseek-harness)
 [![npm](https://img.shields.io/npm/v/@bright9025/dsh-session-stats-viewer?logo=npm&color=cb3837)](https://www.npmjs.com/package/@bright9025/dsh-session-stats-viewer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22b394.svg)](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/LICENSE)
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A520-339933?logo=node.js&logoColor=white)](https://nodejs.org)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
@@ -34,7 +34,7 @@
 
 | 浅色 | 深色 |
 | --- | --- |
-| ![会话统计总览（浅色）](./docs/screenshots/overview-light.png) | ![会话统计总览（深色）](./docs/screenshots/overview-dark.png) |
+| ![会话统计总览（浅色）](https://raw.githubusercontent.com/Bright9025/dsh-session-stats-viewer/main/docs/screenshots/overview-light.png) | ![会话统计总览（深色）](https://raw.githubusercontent.com/Bright9025/dsh-session-stats-viewer/main/docs/screenshots/overview-dark.png) |
 
 ## 📁 项目结构
 
@@ -191,11 +191,11 @@ npm test
 
 ## 📄 许可证
 
-本项目采用 [MIT License](./LICENSE) 开源。
+本项目采用 [MIT License](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/LICENSE) 开源。
 
 ## 🤝 贡献
 
-欢迎提交 Issue 或 Pull Request。请先阅读 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+欢迎提交 Issue 或 Pull Request。请先阅读 [CONTRIBUTING.md](https://github.com/Bright9025/dsh-session-stats-viewer/blob/main/CONTRIBUTING.md)。
 
 ## 📧 联系方式
 

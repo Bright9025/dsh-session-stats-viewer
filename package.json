@@ -1,6 +1,6 @@
 {
   "name": "@bright9025/dsh-session-stats-viewer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A DeepSeek Harness plugin that adds a session statistics page to the Web sidebar.",
   "author": "Bright9025",
   "license": "MIT",
@@ -39,10 +39,7 @@
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
-    "docs/screenshots/*.png",
     "README.md",
-    "README.en.md",
-    "CONTRIBUTING.md",
     "LICENSE"
   ],
   "scripts": {
