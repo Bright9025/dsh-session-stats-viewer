@@ -31,7 +31,9 @@
 
 ## 🖼️ 界面
 
-![会话统计总览](./docs/screenshots/overview.png)
+| 浅色 | 深色 |
+| --- | --- |
+| ![会话统计总览（浅色）](./docs/screenshots/overview-light.png) | ![会话统计总览（深色）](./docs/screenshots/overview-dark.png) |
 
 ## 📁 项目结构
 
